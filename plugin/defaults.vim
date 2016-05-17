@@ -178,7 +178,7 @@ endif
 
 " HTML
 if !exists('g:formatdef_htmlbeautify')
-    let g:formatdef_htmlbeautify = '"html-beautify -f - -s ".shiftwidth()'
+    let g:formatdef_htmlbeautify = '"html-beautify -w=800 -I -b=collapse -n -A=auto -i=5 -f - -s ".shiftwidth()'
 endif
 
 if !exists('g:formatdef_tidy_html')
@@ -186,7 +186,7 @@ if !exists('g:formatdef_tidy_html')
 endif
 
 if !exists('g:formatters_html')
-    let g:formatters_html = ['htmlbeautify', 'tidy_html']
+    let g:formatters_html = [ 'htmlbeautify']
 endif
 
 
