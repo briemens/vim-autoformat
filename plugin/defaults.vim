@@ -178,15 +178,15 @@ endif
 
 " HTML
 if !exists('g:formatdef_htmlbeautify')
-    let g:formatdef_htmlbeautify = '"html-beautify -w=800 -I -b=collapse -n -A=auto -i=5 -f - -s ".shiftwidth()'
+    let g:formatdef_htmlbeautify = '"html-beautify -S separate -w=800 -I -b=collapse -n -A=auto -i=5 -f - -s ".shiftwidth()'
 endif
 
 if !exists('g:formatdef_tidy_html')
-    let g:formatdef_tidy_html = '"tidy -q --show-errors 0 --show-warnings 0 --force-output --indent auto --indent-spaces ".shiftwidth()." --vertical-space yes --tidy-mark no -wrap ".&textwidth'
+    let g:formatdef_tidy_html = '"tidy -q --show-errors 0 --show-warnings 0 --force-output --indent yes --indent-spaces ".shiftwidth()." --vertical-space yes --tidy-mark no"'
 endif
 
 if !exists('g:formatters_html')
-    let g:formatters_html = [ 'htmlbeautify']
+    let g:formatters_html = ['htmlbeautify']
 endif
 
 
